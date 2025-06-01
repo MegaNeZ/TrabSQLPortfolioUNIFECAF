@@ -29,7 +29,7 @@ CREATE TABLE tbl_Professor_Telefones (
     telefone VARCHAR(20) NOT NULL,
     FOREIGN KEY (id_professor) REFERENCES tbl_Professores(id_professor)
         ON DELETE CASCADE
-        ON UPDATE CASCADE
+        ON UPDATE 
 );
 
 CREATE TABLE tbl_Professor_Especializacoes (
@@ -121,8 +121,6 @@ CREATE TABLE tbl_Alunos_Turmas (
         ON DELETE CASCADE
         ON UPDATE CASCADE
 );
-
--- Inserindo dados de exemplo para que você possa ver as tabelas preenchidas
 
 INSERT INTO tbl_Cursos (nome_curso, descricao, carga_horaria) VALUES
 ('Engenharia de Software', 'Foco em desenvolvimento e arquitetura de sistemas.', 3600),
